@@ -55,10 +55,49 @@
 <h2>Filmography</h2>
 <table border="1">
 <tr>
-  <% @filmography.each do |a_film| %>
-    <td>
-      <%= a_film.name %>
-      <% end %>
-    </td>
+  <th>
+    Title
+  </th>
+
+  <th>
+    Year
+  </th>
+
+  <th>
+    Director
+  </th>
+
+  <th>
+    Character name
+  </th>
+
+  <th>
+  </th>
+</tr>     
+
+<tr>
+  <td>
+    x
+  </td>
+
+  <td>
+    y
+  </td>
+
+  <td>
+    z
+  </td>
+
+  <td>
+    <% @filmography.each do |a_film| %>
+    <%= a_film.name %>
+    <% end %>
+  </td>
+
+  <td>
+    <a href="/movies">
+      Show details
+    </a>
+  </td>
 </tr>
 </table>
