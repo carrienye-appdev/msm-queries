@@ -77,7 +77,11 @@
 
 <tr>
   <td>
-    x
+    <% @filmography.each do |a_movie| %>
+    <% d = a_movie.movie_id %>
+    <% m = Movie.where({ :id => d }).at(0) %>
+    <%= m.title %>
+    <% end %>
   </td>
 
   <td>
@@ -85,7 +89,13 @@
   </td>
 
   <td>
-    z
+    <% @filmography.each do |a_movie| %>
+    <% d = a_movie.movie_id %>
+    <% m = Movie.where({ :id => d }).at(0) %>
+    <% h = m.director_id %>
+    <% g = Director.where({ :id => h }).at(0) %>
+    <%= g.name %>
+    <% end %>
   </td>
 
   <td>
